@@ -46,11 +46,11 @@ def apply_clearance(cart)
     
   #if item
     
-    if item[:clearance] 
+    #if item[:clearance] 
       
       item[:price] = 2.4
       
-    end
+    #end
     
   #end
   end
