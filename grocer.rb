@@ -26,8 +26,6 @@ def apply_coupons(cart, coupons)
       
       if cart[coupon[:item]][:count] >= coupon[:num]
         
-       
-        
         cart[coupon[:item] + " W/COUPON"] = {
           count: coupon[:num] * item_count_cart,
           price: coupon[:cost] / coupon[:num],
@@ -46,12 +44,13 @@ def apply_clearance(cart)
   
   cart.each do |item|
     
-    if cart[:item][:clearance]=true
+    
+    if cart[item][:clearance]
       
-      cart[:item][:price] = (cart[:item][:price]* 0.8).round(2)
-      
+      cart[item][:price] = (cart[item][:price]* 0.8).round(2)
     end
   end
+  
 end
 
 def checkout(cart, coupons)
