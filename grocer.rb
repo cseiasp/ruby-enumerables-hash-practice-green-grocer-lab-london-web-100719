@@ -44,7 +44,7 @@ def apply_clearance(cart)
   
   cart.each do |item|
     
-  if cart[item][:clearance]
+  if cart[item]
     
     #if cart[item][:clearance] 
       
