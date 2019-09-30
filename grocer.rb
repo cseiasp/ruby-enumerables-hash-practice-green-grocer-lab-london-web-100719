@@ -65,7 +65,6 @@ def checkout(cart, coupons)
   
   total = 0
   
-  new_cart.each do |items|
   new_cart_coupons = apply_coupons(new_cart,coupons)
   new_cart_coupons_clearance = apply_clearance(new_cart_coupons)
   
